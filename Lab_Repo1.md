@@ -6,7 +6,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
 
 ## `cd` : Change Directory
 
-1. Using the command `cd` with no arguments
+1、 Using the command `cd` with no arguments
 
   ```
   [user@beijie ~/lecture1]$ cd
@@ -21,7 +21,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output shows that you are in home directory now.
 
-2. Using the command `cd` with a path to a directory as an argument
+2、 Using the command `cd` with a path to a directory as an argument
    
   ```
   [user@beijie ~/lecture1]$ cd lab1
@@ -36,7 +36,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output shows that you are in directory */home/lecture1/lab1* now.
 
-3. Using the command `cd` with a path to a file as an argument
+3、 Using the command `cd` with a path to a file as an argument
    
   ```
   [user@beijie ~/lecture1]$ cd Hello.java
@@ -52,7 +52,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
 ## `ls` : List Files
 
-1. Using the command `ls` with no arguments
+1、 Using the command `ls` with no arguments
    
   ```
   [user@beijie ~/lecture1]$ ls
@@ -67,7 +67,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output shows all the contents in current directory */home/lectuture1*.
     
-2. Using the command `ls` with a path to a directory as an argument
+2、 Using the command `ls` with a path to a directory as an argument
    
   ```
   [user@beijie ~/lecture1]$ ls lab1
@@ -82,7 +82,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output shows all the folders and files under the directory *lab1*.
 
-3. Using the command `ls` with a path to a file as an argument
+3、 Using the command `ls` with a path to a file as an argument
    
   ```
   [user@beijie ~/lecture1]$ ls Hello.java
@@ -100,7 +100,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
 
 ## `cat` : View or Create A File
 
-1. Using the command `cat` with no arguments
+1、 Using the command `cat` with no arguments
    
   ```
   [user@beijie ~/lecture1]$ cat
@@ -115,7 +115,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output is an error since there is no pathname after `cat`, and thus it does not know whose contents to print. It keeps returning empty when pressing enter, and does not exist until you enter `ctrl + c`.
 
-2. Using the command `cat` with a path to a directory as an argument
+2、 Using the command `cat` with a path to a directory as an argument
    
   ```
   [user@beijie ~/lecture1]$ cd lab1
@@ -130,7 +130,7 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
   
   * The output is an error, indicating that *lab1* is a directory rather than a file. This error exists because cat can only show contents of a file, and cannot proceed with a directory.
 
-3. Using the command `cat` with a path to a file as an argument
+3、 Using the command `cat` with a path to a file as an argument
    
   ```
   [user@beijie ~/lecture1]$ cat Hello.java
