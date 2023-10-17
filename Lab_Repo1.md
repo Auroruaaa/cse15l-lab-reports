@@ -1,5 +1,5 @@
 # CSE 15L Lab Report 1
-*Beijie Cheng | Oct. 4, 2023*
+*Beijie Cheng | Oct. 16, 2023 | Resubmission*
 
 In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provide examples of using these commands to explore their application.
 
