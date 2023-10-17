@@ -113,12 +113,12 @@ In the first lab report, I will explain the command `cd`, `ls`, `cat`, and provi
 
   * This command can view the contents of a file.
   
-  * The output is an error since there is no pathname after `cat`, and thus it does not know whose contents to print. It keeps returning empty when pressing enter, and does not exist until you enter `ctrl + c`.
+  * This output is actually not an error. It reads data from standard input and writes them to standard output. You can put a pathname after `cat` to print the contents. 
 
 2、 Using the command `cat` with a path to a directory as an argument
    
   ```
-  [user@beijie ~/lecture1]$ cd lab1
+  [user@beijie ~/lecture1]$ cat lab1
 
 
   cat: lab1: Is a directory
