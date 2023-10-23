@@ -1,6 +1,6 @@
 # CSE 15L Lab Report 1
 
-*Beijie Cheng | Oct. 16, 2023 | Resubmission*
+*Beijie Cheng | Oct. 20, 2023*
 
 ## Part 1
 
