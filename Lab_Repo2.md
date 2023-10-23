@@ -1,4 +1,4 @@
-# CSE 15L Lab Report 1
+# CSE 15L Lab Report 2
 
 *Beijie Cheng | Oct. 20, 2023*
 
@@ -7,6 +7,7 @@
 A web server called StringServer that supports the behavior of adding messages.
 
 * StringServer.java
+  
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -103,6 +104,7 @@ public class Server {
         System.out.println("Server Started!");
     }
 }
+
 ```
 
 <img width="684" alt="Screenshot 2023-10-22 at 22 44 47" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/c88bb2fd-fd69-447f-acf4-411570d2746a">
