@@ -1,6 +1,6 @@
 # CSE 15L Lab Report 2
 
-*Beijie Cheng | Oct. 20, 2023*
+*Beijie Cheng | Nov. 4, 2023 | Resubmission*
 
 ## Part 1
 
@@ -109,19 +109,35 @@ public class Server {
 
 <img width="684" alt="Screenshot 2023-10-22 at 22 44 47" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/c88bb2fd-fd69-447f-acf4-411570d2746a">
 
-In this page, the functions for the condition of "add-message" is used. The main function is called, and since argc length is not zero, commands in /*public String handleRequest(URI url)*/ is called. The url is assigned to be 3999 here. As the condition /*(url.getPath().contains("/add-message"))*/ in the first if statement is truth. Then, the following string is spilt into two parts and information after "s=" is stored and printed. In the class, both ArrayList and integer changed. The new message is stored into the ArrayList, and the integer n increased by 1 for the new message.
+In the first case, I added “/add-message?s=a” at the end of the link.
 
-<img width="584" alt="Screenshot 2023-10-22 at 22 54 51" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/5eb97ce4-5361-4f99-b090-59134c3cac41">
+In this page, the Class “StringServer” is called to start the Server. After that, I called the method “class Handler implements URLHandler” inside the main functuion. Since I add `/add-message` to the url, the function “public String handleRequest(URI url)” will process my request with the condition of `/add-message`.
 
-In this page, after the main function is called, the functions for the condition of /*return String.join("\n", messages); // print out messages*/ is also called. The url is also 3999 here. Since there is no new message added, so the if command is not called, and the return function outside the if statement will be called. No variable is changed in the class since there is no change made here. Only the information in ArrayList will be printed without changing anything.
+In the main funciton, the argument is the port number which is used to start the server. The value of this argument is 3999. In the function “handleRequest”, the argument is “URI url”. In Class “URLHandler”, the integer `num` and String `old_s` will record my request. If I input the request “/add-message” and the query after it, the parameters[1] will record the string message. The `num` will record the number of the query I input and `old_s` will record my previous input and output to the screen. Here, the value of `num` is {1} and the value of `old_s` is {“a”}.
+
+The value `num` and `old_s` changed if I request to “/add-messge” to the Server. `num` changes from 0 to 1 since there was 0 message in Server and my request will add 1 to num. `old_s` was empty as the server started. After I add the query to the url, it will change to `old_s` = “1. a\n”.
+
+<img width="659" alt="Screenshot 2023-11-04 at 15 07 56" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/785f562b-db4c-401c-be24-932ac60178e8">
+
+In this page, I use the link "localhost:3999/add-message?s=abc". Similarly, the Class “StringServer” is called to start the Server, and the method “class Handler implements URLHandler” is called inside the main functuion. Since I also use `/add-message` to the url, the function “public String handleRequest(URI url)” will process my request with the condition of `/add-message`.
+
+In the main funciton, the argument is the port number which is used to start the server. The value of this argument is 3999. In the function “handleRequest”, the argument is “URI url”. And the function "handleRequest" is called just like the previous case. This time, the integer `num` increases to 2 since this is the second time processing this request. The String old_s will be used to memorize my previous input as well as the record this time. The parameters[1] will record the string message, which is "abc" here.
+
+The value of `num` changes from 1 to 2 since I made a new request. `old_s` was "1. a\n" and changed to “1. a\n2. abd\n”, meaning that it stores the history of my requests.
+
 
 ## Part 2
 
+The path to the private key for my SSH key on my Computer is `/Users/jessicacheng/.ssh`.
+
+<img width="357" alt="Screenshot 2023-11-04 at 15 15 28" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/c69dc78d-2b93-4fda-948e-71bf83853a93">
+
+
+The path to the public key for my SSH key for login ieng6 in my account is `/home/linux/ieng6/cs151fa23/cs151fa23sv/ssh`.
+
 <img width="415" alt="Screenshot 2023-10-22 at 23 11 09" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/9c033589-8f0a-4a12-af4e-2b8e79b121fa">
 
-
-<img width="362" alt="Screenshot 2023-10-22 at 23 12 44" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/99a5a5eb-2e9d-49f4-8728-d266a94dad6f">
-
+To access the server:
 
 <img width="661" alt="Screenshot 2023-10-22 at 23 13 33" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/9347eb38-6aad-4943-8fd4-d63c92f865de">
 
