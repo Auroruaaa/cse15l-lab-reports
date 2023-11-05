@@ -106,6 +106,7 @@ Therefore, we want to use a third variable to store elements in original in the 
 
 ## Part2 - Researching Commands
 
+> The source of following contents is GreeksForGreeks: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 > The structure of the directories is as follows:
 
