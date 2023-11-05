@@ -111,7 +111,7 @@ Therefore, we want to use a third variable to store elements in original in the 
 
 <img width="221" alt="Screenshot 2023-11-04 at 17 51 04" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/28db60e9-2500-4f6d-90a6-649ceb1f3070">
 
-1. `grep` + `-c`: This prints only a count of the lines that match a pattern
+1, `grep` + `-c`: This prints only a count of the lines that match a pattern
 
 ```
 jessicacheng@JessicasMacBook path-examples % grep -c "e" some-files/a.txt
@@ -129,7 +129,7 @@ jessicacheng@JessicasMacBook path-examples % grep -c "o" some-files/more-files/b
 
 > In this case, the output `6` shows that in the file some-files/more-files/b.txt, there is only one line that contains character 'o'.
 
-2. `grep` + `-h`: Display the matched lines, but do not display the filenames
+2, `grep` + `-h`: Display the matched lines, but do not display the filenames
 
 ```
 jessicacheng@JessicasMacBook path-examples % grep -h "e" some-files/a.txt
@@ -152,7 +152,7 @@ Good Night
 
 > In the fourth example, the terminal prints all the lines in file some-files/more-files/b.txt that contains the character 'o'.
 
-3. `grep` + `-w` : Match whole word
+3, `grep` + `-w` : Match whole word
 
 ```
 jessicacheng@JessicasMacBook path-examples % grep -w "Good" some-files/a.txt
@@ -172,7 +172,7 @@ Good Night
 
 > In this example, the terminal prints all the lines in file some-files/more-files/b.txt that contains the whole word of "Good".
    
-4. `grep` + `-r`: Search recursively for a pattern in the directory and prints the searched pattern in the given directory recursively in all the files
+4, `grep` + `-r`: Search recursively for a pattern in the directory and prints the searched pattern in the given directory recursively in all the files
 
 ```
 jessicacheng@JessicasMacBook path-examples % grep -r "hello" some-files
