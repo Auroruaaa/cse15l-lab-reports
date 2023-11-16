@@ -41,7 +41,7 @@ Beijie Cheng | Nov. 4, 2023
 
 <img width="479" alt="Screenshot 2023-11-15 at 21 44 33" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/9d1ed1f5-df46-4800-8877-daadad3c8b1d">
 
-> `<up> <enter>`
+> `<up> <up> <enter>`
 
 > I used up arrow twice for my bash history of the command `bash test.sh` to run the tests again. This time all the tests are passed.
 
