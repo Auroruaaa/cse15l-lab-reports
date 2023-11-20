@@ -99,100 +99,57 @@ OK (1 test)
 
 ```
 
-In the initial edition, as the for loop starts, the integer array arr starts to change from its first element. In this case, arr[0] = arr[size-1], arr[1] = arr[size-2], meaning that the first half elements in arr will not be stored. So when the for loop comes to i = size-1, and we want to assign arr[size-1] = the first element of the original arr, we will find that arr[0], which should store the first element of the original arr, has already changed into the last element of the array in previous loops.
+In the initial edition, as the for loop starts, the integer array arr starts to change from its first element. In this case, `arr[0]` = `arr[size-1]`, `arr[1]` = `arr[size-2]`, meaning that the first half elements in arr will not be stored. So when the for loop comes to i = size-1, and we want to assign `arr[size-1]` = the first element of the original arr, we will find that `arr[0]`, which should store the first element of the original arr, has already changed into the last element of the array in previous loops.
 
-Therefore, we want to use a third variable to store elements in original in the location where we are going to convert. So we use int temp to store arr[i]. For example, when i = 0, we first store the 1st element of original array into int temp. Then we assign arr[0] (1st element of the converted array) as arr[arr.lengh-1] (the last element in the original array). Likewise, we put temp (1st element in original array) into arr[arr.length - 1] (the last element of the converted array). And we change the range of i into [0,arr.length/2 - 1] because we change both the ith and (length-1-i)th elements (2 elements) at the same time.
+Therefore, we want to use a third variable to store elements in original in the location where we are going to convert. So we use int temp to store `arr[i]`. For example, when `i` = 0, we first store the 1st element of original array into int temp. Then we assign `arr[0]` (1st element of the converted array) as `arr[arr.lengh-1]` (the last element in the original array). Likewise, we put temp (1st element in original array) into `arr[arr.length - 1]` (the last element of the converted array). And we change the range of i into `[0,arr.length/2 - 1]` because we change both the ith and (length-1-i)th elements (2 elements) at the same time.
 
 
 ## Part2 - Researching Commands
 
 > The source of following contents is GreeksForGreeks: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
-> The structure of the directories is as follows:
-
-<img width="221" alt="Screenshot 2023-11-04 at 17 51 04" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/28db60e9-2500-4f6d-90a6-649ceb1f3070">
 
 1, `grep` + `-c`: This prints only a count of the lines that match a pattern
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -c "e" some-files/a.txt
- 
-1
-```
+<img width="524" alt="Screenshot 2023-11-20 at 12 29 32" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/8bfdcede-f63b-4db2-849c-2a7ef026113c">
 
-> In the first example, the output `1` shows that in the file some-files/a.txt, there is only one line that contains character 'e'.
+> In the first example, the output lines show the number of lines that contain character 'e' in all .txt files in technical/911report.
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -c "o" some-files/more-files/b.txt
+<img width="536" alt="Screenshot 2023-11-20 at 12 32 44" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/7212ec0e-1834-483b-a880-df4f48d4ef8a">
 
-6
-```
+> In this case, the output lines show the number of lines that contain character 'ae' in all .txt files in technical/911report, and we can see in the last two lines that even if the file does not contain the character, the command will still print the result 0.
 
-> In this case, the output `6` shows that in the file some-files/more-files/b.txt, there is only one line that contains character 'o'.
 
 2, `grep` + `-h`: Display the matched lines, but do not display the filenames
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -h "e" some-files/a.txt
-       
-hello
-```
+<img width="576" alt="Screenshot 2023-11-20 at 12 36 42" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/1964db13-fad3-4e96-8b1d-92450787e681">
 
-> In this example, the output `hello` shows that in the file some-files/a.txt, the line that contains character 'e' is the line "hello".
+> In this example, the output shows the lines that contain the word "asthma" in the files ./biomed/1471*.txt without printing filenames.
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -h "o" some-files/more-files/b.txt
- 
-hello
-halo
-Good Morning
-Good Afternoon
-Good Evening
-Good Night
-```
+<img width="569" alt="Screenshot 2023-11-20 at 12 39 42" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/418ccb60-e7a9-4aa4-9822-546ad12138d4">
 
-> In the fourth example, the terminal prints all the lines in file some-files/more-files/b.txt that contains the character 'o'.
+> In the fourth example, the terminal prints all the lines in files ./biomed/*10.txt that contains the word 'rejection'.
+
 
 3, `grep` + `-w` : Match whole word
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -w "Good" some-files/a.txt
- 
-```
+<img width="788" alt="Screenshot 2023-11-20 at 12 41 26" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/f57baeb2-74a1-4d40-8890-c28cfd238185">
 
-> In this case, the terminal does not return anything, so there is no line containing the word "Good" in the file some-files/a.txt.
+> In this case, the terminal returns the filename and the lines that contain the exact word 'cancer' in all subdirectories of ./government.
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -w "Good" some-files/more-files/b.txt
- 
-Good Morning
-Good Afternoon
-Good Evening
-Good Night
-```
 
-> In this example, the terminal prints all the lines in file some-files/more-files/b.txt that contains the whole word of "Good".
+<img width="582" alt="Screenshot 2023-11-20 at 12 43 18" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/917c95a3-8f63-4ccb-b605-8652d343a417">
+
+> This time, the terminal does not return anything. This example only changed 'cancer' to 'cance' from the previous example, this provides a typo and therefore no lines will contain this word 'cance'. Thus, this time there is no output.
    
 4, `grep` + `-r`: Search recursively for a pattern in the directory and prints the searched pattern in the given directory recursively in all the files
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -r "hello" some-files
- 
-some-files/more-files/b.txt:hello
-some-files/a.txt:hello
-```
+<img width="888" alt="Screenshot 2023-11-20 at 13 01 52" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/06c8f5d0-8328-42c4-891c-d1a98d847e6d">
+> This example shows that with the option of `-r`. > This example shows that with the option of `-r`. This time I add a directory instead of the filename at the end, and it will recursively search in the directory ./plos and print the lines that contains the word "opinions" with path.
 
-> This example shows that with the option of `-r`, it will recursively search in the directory some-files and print the lines that contains the word "hello" with path.
+<img width="956" alt="Screenshot 2023-11-20 at 12 47 13" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/9976fcc8-4de9-4dbe-9d8a-212396599412">
 
-```
-jessicacheng@JessicasMacBook path-examples % grep -r "t" some-files/even-more-files
- 
-some-files/even-more-files/d.java:junit
-some-files/even-more-files/d.java:test
-some-files/even-more-files/a.txt:nested file
-```
-
-> The last example indicates that the output prints all the lines that contain the character 't' in the directory of some-files/even-more-files with the path to the file.
+> The last example indicates that the output prints all the lines that contain the word 'opinion' in the directory of ./plos with the path to the file. This time it prints more lines than the one before because it is not searching for whole word this time.
 
 
 
