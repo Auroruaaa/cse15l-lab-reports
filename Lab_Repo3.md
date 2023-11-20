@@ -106,9 +106,6 @@ Therefore, we want to use a third variable to store elements in original in the 
 
 ## Part2 - Researching Commands
 
-> The source of following contents is GreeksForGreeks: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
-
-
 1, `grep` + `-c`: This prints only a count of the lines that match a pattern
 
 <img width="524" alt="Screenshot 2023-11-20 at 12 29 32" src="https://github.com/Auroruaaa/cse15l-lab-reports/assets/116754028/8bfdcede-f63b-4db2-849c-2a7ef026113c">
@@ -151,6 +148,8 @@ Therefore, we want to use a third variable to store elements in original in the 
 
 > The last example indicates that the output prints all the lines that contain the word 'opinion' in the directory of ./plos with the path to the file. This time it prints more lines than the one before because it is not searching for whole word this time.
 
+> Reference
+> The source of following contents is GreeksForGreeks: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 
 
