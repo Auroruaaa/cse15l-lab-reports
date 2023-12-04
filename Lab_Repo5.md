@@ -153,4 +153,4 @@ Fix the typo in function `merge` (`index2` -> `index1`(line33)) so that it will 
 
 ## Part 2 – Reflection
 
-I think it is pretty useful and cool that I learned how to use `vim` in this course. It is really convenient that now I can edit and run commands in the terminal instead of open an IDE. The java debugger is also helpful and I'm still learning how to use it to find bugs in my code. Compared to test cases and printing out each steps, the java debugger is more intuitive and I does not need to write a bunch of test cases for the code.
+I think it is pretty useful and cool that I learned how to use `vim` in this course. It is really convenient that now I can edit and run commands in the terminal instead of open an IDE. The java debugger is also helpful and I'm still learning how to use it to find bugs in my code. Compared to test cases and printing out each steps, the java debugger is more intuitive and I do not need to write a bunch of test cases for the code.
